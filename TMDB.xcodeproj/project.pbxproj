@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		2857527D1D70C60B003A472F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857527C1D70C60B003A472F /* AppDelegate.swift */; };
-		2857527F1D70C60B003A472F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857527E1D70C60B003A472F /* ViewController.swift */; };
+		2857527F1D70C60B003A472F /* GameFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857527E1D70C60B003A472F /* GameFeedTableViewController.swift */; };
 		285752821D70C60B003A472F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285752801D70C60B003A472F /* Main.storyboard */; };
 		285752841D70C60B003A472F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285752831D70C60B003A472F /* Assets.xcassets */; };
 		285752871D70C60B003A472F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285752851D70C60B003A472F /* LaunchScreen.storyboard */; };
+		2857529B1D71A127003A472F /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857529A1D71A127003A472F /* GameTableViewCell.swift */; };
+		2857529D1D7328C2003A472F /* GamesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857529C1D7328C2003A472F /* GamesFeed.swift */; };
+		2857529F1D7328F7003A472F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857529E1D7328F7003A472F /* NetworkHelper.swift */; };
+		285752A11D7379E1003A472F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285752A01D7379E1003A472F /* Game.swift */; };
+		AA57EC3D66C2C32D679B75D1 /* Pods_TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A6DD9E1FA9F58F294AE397 /* Pods_TMDB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15284BD40521A721018B60DF /* Pods-TMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMDB/Pods-TMDB.debug.xcconfig"; sourceTree = "<group>"; };
 		285752791D70C60A003A472F /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2857527C1D70C60B003A472F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2857527E1D70C60B003A472F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2857527E1D70C60B003A472F /* GameFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameFeedTableViewController.swift; path = ../GameFeedTableViewController.swift; sourceTree = "<group>"; };
 		285752811D70C60B003A472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		285752831D70C60B003A472F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		285752861D70C60B003A472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		285752881D70C60B003A472F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2857529A1D71A127003A472F /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTableViewCell.swift; path = ../GameTableViewCell.swift; sourceTree = "<group>"; };
+		2857529C1D7328C2003A472F /* GamesFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesFeed.swift; sourceTree = "<group>"; };
+		2857529E1D7328F7003A472F /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		285752A01D7379E1003A472F /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9242551098449B8C26EC76C2 /* Pods-TMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMDB/Pods-TMDB.release.xcconfig"; sourceTree = "<group>"; };
+		F7A6DD9E1FA9F58F294AE397 /* Pods_TMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA57EC3D66C2C32D679B75D1 /* Pods_TMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				2857527B1D70C60B003A472F /* TMDB */,
 				2857527A1D70C60A003A472F /* Products */,
+				7411F4B2069C7A4A686DE592 /* Pods */,
+				56C3755301086A12E9788009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,67 @@
 		2857527B1D70C60B003A472F /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				2857528E1D70C8E2003A472F /* Models */,
+				2857528F1D70C8F9003A472F /* Views */,
+				285752901D70C904003A472F /* Controllers */,
+				285752911D70C917003A472F /* Helpers */,
 				2857527C1D70C60B003A472F /* AppDelegate.swift */,
-				2857527E1D70C60B003A472F /* ViewController.swift */,
 				285752801D70C60B003A472F /* Main.storyboard */,
 				285752831D70C60B003A472F /* Assets.xcassets */,
 				285752851D70C60B003A472F /* LaunchScreen.storyboard */,
 				285752881D70C60B003A472F /* Info.plist */,
+				285752A01D7379E1003A472F /* Game.swift */,
 			);
 			path = TMDB;
+			sourceTree = "<group>";
+		};
+		2857528E1D70C8E2003A472F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2857529C1D7328C2003A472F /* GamesFeed.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2857528F1D70C8F9003A472F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		285752901D70C904003A472F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2857527E1D70C60B003A472F /* GameFeedTableViewController.swift */,
+				2857529A1D71A127003A472F /* GameTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		285752911D70C917003A472F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2857529E1D7328F7003A472F /* NetworkHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		56C3755301086A12E9788009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6DD9E1FA9F58F294AE397 /* Pods_TMDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7411F4B2069C7A4A686DE592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15284BD40521A721018B60DF /* Pods-TMDB.debug.xcconfig */,
+				9242551098449B8C26EC76C2 /* Pods-TMDB.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2857528B1D70C60B003A472F /* Build configuration list for PBXNativeTarget "TMDB" */;
 			buildPhases = (
+				38A88AA78593F413546ACB47 /* [CP] Check Pods Manifest.lock */,
 				285752751D70C60A003A472F /* Sources */,
 				285752761D70C60A003A472F /* Frameworks */,
 				285752771D70C60A003A472F /* Resources */,
+				363951C3453AA8B3989DC446 /* [CP] Embed Pods Frameworks */,
+				142892FCAD0C29D456F25F6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +202,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		142892FCAD0C29D456F25F6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMDB/Pods-TMDB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		363951C3453AA8B3989DC446 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TMDB/Pods-TMDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38A88AA78593F413546ACB47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		285752751D70C60A003A472F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2857527F1D70C60B003A472F /* ViewController.swift in Sources */,
+				2857527F1D70C60B003A472F /* GameFeedTableViewController.swift in Sources */,
+				285752A11D7379E1003A472F /* Game.swift in Sources */,
 				2857527D1D70C60B003A472F /* AppDelegate.swift in Sources */,
+				2857529F1D7328F7003A472F /* NetworkHelper.swift in Sources */,
+				2857529B1D71A127003A472F /* GameTableViewCell.swift in Sources */,
+				2857529D1D7328C2003A472F /* GamesFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,23 +373,31 @@
 		};
 		2857528C1D70C60B003A472F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15284BD40521A721018B60DF /* Pods-TMDB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TMDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toyberman.TMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		2857528D1D70C60B003A472F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9242551098449B8C26EC76C2 /* Pods-TMDB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TMDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toyberman.TMDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -289,6 +420,7 @@
 				2857528D1D70C60B003A472F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
