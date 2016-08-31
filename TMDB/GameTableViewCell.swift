@@ -15,6 +15,10 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     
 
+    @IBOutlet weak var foregroundView: UIView!
+    
+    @IBOutlet weak var containerView: UIView!
+    
     @IBOutlet weak var gameImage: UIImageView!
     
     /*
