@@ -9,15 +9,11 @@
 import UIKit
 import FoldingCell
 
-class GameTableViewCell: UITableViewCell {
+class GameTableViewCell: FoldingCell {
     
     
     @IBOutlet weak var name: UILabel!
     
-
-    @IBOutlet weak var foregroundView: UIView!
-    
-    @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var gameImage: UIImageView!
     
@@ -28,5 +24,13 @@ class GameTableViewCell: UITableViewCell {
         // Drawing code
     }
     */
+    
+    override func animationDuration(itemIndex:NSInteger, type:AnimationType)-> NSTimeInterval {
+        
+        // durations count equal it itemCount
+        let durations = [0.33, 0.26, 0.26] // timing animation for each view
+        return durations[itemIndex]
+    }
+    
 
 }

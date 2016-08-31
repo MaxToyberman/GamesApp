@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-g1-gBM">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-g1-gBM" customClass="RotatedView" customModule="FoldingCell">
                                             <rect key="frame" x="20" y="8" width="560" height="100"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-G4-Zun">
@@ -59,7 +59,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="containerView" destination="yep-ih-qW1" id="HiC-Zc-dyd"/>
+                                    <outlet property="containerViewTop" destination="jAJ-qS-0tA" id="nmz-Gb-7ef"/>
                                     <outlet property="foregroundView" destination="nzW-g1-gBM" id="fqN-WT-JhW"/>
+                                    <outlet property="foregroundViewTop" destination="AOQ-Fu-DXW" id="q9n-Kw-y7c"/>
                                     <outlet property="gameImage" destination="Ngq-G4-Zun" id="Hgd-XY-BJi"/>
                                     <outlet property="name" destination="l2X-Uu-Smi" id="5rl-9Z-fd7"/>
                                 </connections>
