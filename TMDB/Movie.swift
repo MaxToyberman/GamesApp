@@ -9,10 +9,10 @@
 
 import Foundation
 
-struct Game {
+struct Movie {
 
-      let name: String
-      var description:String
+      let title: String
+      var overview:String
       var imageURL:String
     
 }

@@ -9,24 +9,24 @@
         <!--MovieUITableViewController-->
         <scene sceneID="5QW-Wn-bCA">
             <objects>
-                <tableViewController id="E88-84-kaa" userLabel="MovieUITableViewController" customClass="GameFeedTableViewController" customModule="TMDB" sceneMemberID="viewController">
+                <tableViewController id="E88-84-kaa" userLabel="MovieUITableViewController" customClass="MovieFeedTableViewController" customModule="TMDB" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="0pi-Vp-QD3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="400" id="lXh-QP-xAA" customClass="GameTableViewCell" customModule="TMDB">
-                                <rect key="frame" x="0.0" y="22" width="600" height="400"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="570" id="lXh-QP-xAA" customClass="MovieTableViewCell" customModule="TMDB">
+                                <rect key="frame" x="0.0" y="22" width="600" height="570"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lXh-QP-xAA" id="2TZ-J3-xFo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="569"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzW-g1-gBM" customClass="RotatedView" customModule="FoldingCell">
                                             <rect key="frame" x="20" y="8" width="560" height="100"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-G4-Zun">
-                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="100"/>
+                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Uu-Smi">
                                                     <rect key="frame" x="100" y="8" width="452" height="21"/>
@@ -42,28 +42,56 @@
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yep-ih-qW1">
                                             <rect key="frame" x="20" y="116" width="560" height="200"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqN-Y1-VuG">
+                                                    <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2o-C3-ZC3">
+                                                    <rect key="frame" x="100" y="8" width="452" height="84"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-g6-xCj">
+                                                    <rect key="frame" x="8" y="153" width="84" height="30"/>
+                                                    <state key="normal" title="Trailers"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-gj-Wyy">
+                                                    <rect key="frame" x="8" y="115" width="84" height="30"/>
+                                                    <state key="normal" title="Posters"/>
+                                                </button>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="200" id="fE0-Il-Jqn"/>
+                                                <constraint firstAttribute="height" constant="200" id="EX3-zp-of1"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="nzW-g1-gBM" firstAttribute="top" secondItem="2TZ-J3-xFo" secondAttribute="topMargin" identifier="foregroundViewTop" id="AOQ-Fu-DXW"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="yep-ih-qW1" secondAttribute="trailing" constant="12" id="Px5-Wx-bMk"/>
+                                        <constraint firstItem="yep-ih-qW1" firstAttribute="leading" secondItem="2TZ-J3-xFo" secondAttribute="leadingMargin" constant="12" id="Fax-2h-R37"/>
                                         <constraint firstItem="nzW-g1-gBM" firstAttribute="leading" secondItem="2TZ-J3-xFo" secondAttribute="leadingMargin" constant="12" id="TqG-Qd-xkn"/>
-                                        <constraint firstItem="yep-ih-qW1" firstAttribute="top" secondItem="2TZ-J3-xFo" secondAttribute="topMargin" constant="108" identifier="containerViewTop" id="jAJ-qS-0tA"/>
-                                        <constraint firstItem="yep-ih-qW1" firstAttribute="leading" secondItem="2TZ-J3-xFo" secondAttribute="leadingMargin" constant="12" id="ksy-aO-vKk"/>
+                                        <constraint firstItem="yep-ih-qW1" firstAttribute="top" secondItem="2TZ-J3-xFo" secondAttribute="topMargin" constant="108" identifier="containerViewTop" id="nJ6-3x-aWw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="nzW-g1-gBM" secondAttribute="trailing" constant="12" id="rGq-Me-WLe"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yep-ih-qW1" secondAttribute="trailing" constant="12" id="zDE-Ly-mzl"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="MovieTableViewCell"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="containerView" destination="yep-ih-qW1" id="HiC-Zc-dyd"/>
-                                    <outlet property="containerViewTop" destination="jAJ-qS-0tA" id="nmz-Gb-7ef"/>
+                                    <outlet property="containerViewTop" destination="nJ6-3x-aWw" id="Dwi-Ek-7FZ"/>
                                     <outlet property="foregroundView" destination="nzW-g1-gBM" id="fqN-WT-JhW"/>
                                     <outlet property="foregroundViewTop" destination="AOQ-Fu-DXW" id="q9n-Kw-y7c"/>
-                                    <outlet property="gameImage" destination="Ngq-G4-Zun" id="Hgd-XY-BJi"/>
-                                    <outlet property="name" destination="l2X-Uu-Smi" id="5rl-9Z-fd7"/>
+                                    <outlet property="movieImage" destination="Ngq-G4-Zun" id="5aF-gn-UhN"/>
+                                    <outlet property="movieImageUnfolded" destination="WqN-Y1-VuG" id="Bhq-Ep-yti"/>
+                                    <outlet property="overView" destination="N2o-C3-ZC3" id="EOd-l2-5pq"/>
+                                    <outlet property="title" destination="l2X-Uu-Smi" id="HsZ-1d-J78"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -10,15 +10,15 @@ import UIKit
 import FoldingCell
 import AlamofireImage
 
-class GameFeedTableViewController:UITableViewController {
+class MovieFeedTableViewController:UITableViewController {
 
     let kCloseCellHeight: CGFloat = 100
     let kOpenCellHeight: CGFloat = 200
     var cellHeights = [CGFloat]()
     
-    var feed:GamesFeed?{
+    var feed:MoviesFeed?{
         didSet{
-            let kRowsCount=(feed?.games.count)!
+            let kRowsCount=(feed?.movies.count)!
 
             for _ in 0...kRowsCount {
                 cellHeights.append(kCloseCellHeight)
@@ -38,20 +38,24 @@ class GameFeedTableViewController:UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feed?.games.count ?? 0
+        return feed?.movies.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell", forIndexPath: indexPath) as! GameTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell", forIndexPath: indexPath) as! MovieTableViewCell
         
-        if let game=feed?.games[indexPath.row]{
+        if let movie=feed?.movies[indexPath.row]{
             
-            cell.name.text=game.name
+            cell.title.text=movie.title
+            
+            cell.overView.text=movie.overview
             // Configure the cell...
-            let URL = NSURL(string: game.imageURL)!
+            let URL = NSURL(string: movie.imageURL)!
             
         //    cell.gameImage.contentMode=UIViewContentMode.ScaleAspectFit
-            cell.gameImage.af_setImageWithURL(URL)
+            cell.movieImage.af_setImageWithURL(URL)
+            
+            cell.movieImageUnfolded.af_setImageWithURL(URL)
             
         }
         

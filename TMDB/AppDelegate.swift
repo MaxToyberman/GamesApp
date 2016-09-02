@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         updateGamesFeed({(feed)->Void in
         
-            let viewController=application.windows[0].rootViewController as? GameFeedTableViewController
+            let viewController=application.windows[0].rootViewController as? MovieFeedTableViewController
             
             viewController?.feed=feed
         })
@@ -50,17 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func updateGamesFeed(completion:(feed:GamesFeed)->Void){
+    func updateGamesFeed(completion:(feed:MoviesFeed)->Void){
         
-        Alamofire.request(.GET,"http://www.giantbomb.com/api/games/?api_key=b472d300833b5fb961d972dfb58cdd9c5f99a463&format=json").responseJSON { response in
+        Alamofire.request(.GET,"https://api.themoviedb.org/3/movie/now_playing?api_key=39ce2c8a878066aa7e7ff178828aadb2&page=1").responseJSON { response in
             
             switch response.result{
                 
             case .Success(let data):
-                
                 let json=JSON(data)
-                let games = GamesFeed(gamesJson: json["results"])
-                completion(feed: games)
+                let movies = MoviesFeed(moviesJson: json["results"])
+                completion(feed: movies)
                 
             case .Failure(let error):
                 print("Request failed with error: \(error)")
