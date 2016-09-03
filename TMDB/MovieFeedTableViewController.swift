@@ -29,7 +29,9 @@ class MovieFeedTableViewController:UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor=UIColor.lightGrayColor()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     
@@ -45,6 +47,7 @@ class MovieFeedTableViewController:UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell", forIndexPath: indexPath) as! MovieTableViewCell
         
         if let movie=feed?.movies[indexPath.row]{
+            
             
             cell.title.text=movie.title
             
@@ -92,7 +95,7 @@ class MovieFeedTableViewController:UITableViewController {
         
         if cell is FoldingCell {
             let foldingCell = cell as! FoldingCell
-            
+            foldingCell.backgroundColor = UIColor.clearColor()
             if cellHeights[indexPath.row] == kCloseCellHeight {
                 foldingCell.selectedAnimation(false, animated: false, completion:nil)
             } else {
