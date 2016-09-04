@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4FD75C6C17A8F127A0B5B29EC47ACFB3'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = '91FE4E3C2B90A6C6498F0F88505EB14A'
+               BlueprintName = 'MVCarouselCollectionView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'MVCarouselCollectionView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

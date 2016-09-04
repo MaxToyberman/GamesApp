@@ -6,12 +6,13 @@
 //  Copyright © 2016 Maxim Toyberman. All rights reserved.
 //
 
-import UIKit
 import FoldingCell
+import Alamofire
 import AlamofireImage
+import SwiftyJSON
 
 class MovieFeedTableViewController:UITableViewController {
-
+    
     let kCloseCellHeight: CGFloat = 100
     let kOpenCellHeight: CGFloat = 200
     var cellHeights = [CGFloat]()
@@ -19,7 +20,7 @@ class MovieFeedTableViewController:UITableViewController {
     var feed:MoviesFeed?{
         didSet{
             let kRowsCount=(feed?.movies.count)!
-
+            
             for _ in 0...kRowsCount {
                 cellHeights.append(kCloseCellHeight)
             }
@@ -30,6 +31,8 @@ class MovieFeedTableViewController:UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor=UIColor.lightGrayColor()
+        self.tableView.contentInset = UIEdgeInsetsZero
+        
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -55,7 +58,7 @@ class MovieFeedTableViewController:UITableViewController {
             // Configure the cell...
             let URL = NSURL(string: movie.imageURL)!
             
-        //    cell.gameImage.contentMode=UIViewContentMode.ScaleAspectFit
+            //    cell.gameImage.contentMode=UIViewContentMode.ScaleAspectFit
             cell.movieImage.af_setImageWithURL(URL)
             
             cell.movieImageUnfolded.af_setImageWithURL(URL)
@@ -111,6 +114,29 @@ class MovieFeedTableViewController:UITableViewController {
     }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier=="postersSegue"){
+            let postersViewController=segue.destinationViewController as! PostersViewController
+            
+            //if the index is not available return
+            guard let index=self.tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let id=String(feed!.movies[index.row].movieId)
+            
+            postersViewController.movieId=id;
+            
+            
+        }
+        else if(segue.identifier=="trailersSegue"){
+            
+            
+        }
+        
+        
+    }
     
     
     

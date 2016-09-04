@@ -10,9 +10,11 @@
 import Foundation
 
 struct Movie {
-
-      let title: String
-      var overview:String
-      var imageURL:String
+    
+    let title: String
+    let overview:String
+    let imageURL:String
+    let movieId:UInt
+    var posters:[String]?
     
 }

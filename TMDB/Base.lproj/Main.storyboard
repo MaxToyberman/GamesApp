@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E88-84-kaa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5lH-jR-Z7Z">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,7 +16,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="570" id="lXh-QP-xAA" customClass="MovieTableViewCell" customModule="TMDB">
-                                <rect key="frame" x="0.0" y="22" width="600" height="570"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="570"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lXh-QP-xAA" id="2TZ-J3-xFo">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="569"/>
@@ -56,10 +56,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-g6-xCj">
                                                     <rect key="frame" x="8" y="153" width="84" height="30"/>
                                                     <state key="normal" title="Trailers"/>
+                                                    <connections>
+                                                        <segue destination="v1Y-sU-xxh" kind="show" identifier="trailersSegue" id="Rbo-UO-oyg"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-gj-Wyy">
                                                     <rect key="frame" x="8" y="115" width="84" height="30"/>
                                                     <state key="normal" title="Posters"/>
+                                                    <connections>
+                                                        <segue destination="PF1-r3-o8w" kind="show" identifier="postersSegue" id="zTB-dD-wc1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,7 +97,9 @@
                                     <outlet property="movieImage" destination="Ngq-G4-Zun" id="5aF-gn-UhN"/>
                                     <outlet property="movieImageUnfolded" destination="WqN-Y1-VuG" id="Bhq-Ep-yti"/>
                                     <outlet property="overView" destination="N2o-C3-ZC3" id="EOd-l2-5pq"/>
+                                    <outlet property="postersButton" destination="RoH-gj-Wyy" id="qdv-7u-iCz"/>
                                     <outlet property="title" destination="l2X-Uu-Smi" id="HsZ-1d-J78"/>
+                                    <outlet property="trailersButton" destination="5fd-g6-xCj" id="b9g-Ys-KQ0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,10 +108,97 @@
                             <outlet property="delegate" destination="E88-84-kaa" id="64T-Tn-adO"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="SVJ-tW-p6y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swB-D6-DIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="395"/>
+            <point key="canvasLocation" x="1023" y="401"/>
+        </scene>
+        <!--Posters-->
+        <scene sceneID="M81-es-R2F">
+            <objects>
+                <collectionViewController id="PF1-r3-o8w" customClass="PostersViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MiD-XA-yfE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ym8-jo-tRb">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="posterCell" id="lxE-w6-kYS" customClass="PosterCollectionViewCell" customModule="TMDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-Ix-5Ud">
+                                            <rect key="frame" x="13" y="13" width="174" height="174"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="e2x-Ix-5Ud" secondAttribute="trailing" constant="5" id="IqZ-K8-qrd"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="e2x-Ix-5Ud" secondAttribute="bottom" constant="5" id="Rs9-dC-Nvq"/>
+                                    <constraint firstItem="e2x-Ix-5Ud" firstAttribute="leading" secondItem="lxE-w6-kYS" secondAttribute="leadingMargin" constant="5" id="ZlP-R2-zkU"/>
+                                    <constraint firstItem="e2x-Ix-5Ud" firstAttribute="top" secondItem="lxE-w6-kYS" secondAttribute="topMargin" constant="5" id="gMi-Ib-DjI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="e2x-Ix-5Ud" id="cjB-0Q-zPH"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="PF1-r3-o8w" id="AXS-SY-het"/>
+                            <outlet property="delegate" destination="PF1-r3-o8w" id="PCU-4v-HLx"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Posters" id="oTe-8b-4pM"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSV-ya-fFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="-115"/>
+        </scene>
+        <!--Trailers-->
+        <scene sceneID="OKa-7w-xrh">
+            <objects>
+                <viewController id="v1Y-sU-xxh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GO5-HX-ly1"/>
+                        <viewControllerLayoutGuide type="bottom" id="aSs-7a-nxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ktB-nE-ycU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trailers" id="pv2-oP-h3Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vl-lS-aEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="630"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ZG-m9-Y1Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5lH-jR-Z7Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YTg-aH-iQB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E88-84-kaa" kind="relationship" relationship="rootViewController" id="Bne-3x-L9M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajx-uv-aw3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="401"/>
         </scene>
     </scenes>
 </document>

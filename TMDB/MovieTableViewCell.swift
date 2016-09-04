@@ -11,7 +11,9 @@ import FoldingCell
 class MovieTableViewCell: FoldingCell {
     
     
+    @IBOutlet weak var trailersButton: UIButton!
 
+    @IBOutlet weak var postersButton: UIButton!
 
     @IBOutlet weak var overView: UITextView!
 
