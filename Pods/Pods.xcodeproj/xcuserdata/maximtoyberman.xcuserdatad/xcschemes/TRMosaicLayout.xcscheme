@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '91FE4E3C2B90A6C6498F0F88505EB14A'
-               BlueprintName = 'MVCarouselCollectionView'
+               BlueprintIdentifier = 'C6EA528B267033550165A063EDC128DC'
+               BlueprintName = 'TRMosaicLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'MVCarouselCollectionView.framework'>
+               BuildableName = 'TRMosaicLayout.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

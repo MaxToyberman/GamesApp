@@ -3,23 +3,23 @@ PODS:
   - AlamofireImage (2.4.1):
     - Alamofire (~> 3.3)
   - FoldingCell (1.0.0)
-  - MVCarouselCollectionView (1.0.9)
   - SwiftyJSON (2.3.2)
+  - TRMosaicLayout (0.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - FoldingCell
-  - MVCarouselCollectionView
   - SwiftyJSON
+  - TRMosaicLayout
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
-  MVCarouselCollectionView: 45b31730d7424a6d9dde3d5fa8f794efefea37f9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TRMosaicLayout: 2f1af0d457377ebc135912b658a65040be9e1651
 
-PODFILE CHECKSUM: f0f4df57c93b79173cf3b56bfb91ee2fc892e2f7
+PODFILE CHECKSUM: bfd12eb50f88a5a738936099def1492600f7335e
 
 COCOAPODS: 1.0.1

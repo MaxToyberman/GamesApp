@@ -19,17 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MVCarouselCollectionView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TRMosaicLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4FD75C6C17A8F127A0B5B29EC47ACFB3</key>
+		<key>63CDDF6DC5DC148C1CA7F84F32753534</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91FE4E3C2B90A6C6498F0F88505EB14A</key>
+		<key>7D03C8B295118CAAC53D7DA82105982F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9E682BD94C7D93BEA4F9753F142B040</key>
+		<key>C6EA528B267033550165A063EDC128DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

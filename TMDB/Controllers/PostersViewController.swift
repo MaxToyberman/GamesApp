@@ -10,12 +10,28 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import SwiftyJSON
+import TRMosaicLayout
 
+extension PostersViewController:TRMosaicLayoutDelegate {
+    
+    func collectionView(collectionView:UICollectionView, mosaicCellSizeTypeAtIndexPath indexPath:NSIndexPath) -> TRMosaicCellType {
+        // I recommend setting every third cell as .Big to get the best layout
+        return indexPath.item % 3 == 0 ? TRMosaicCellType.Big : TRMosaicCellType.Small
+    }
+    
+    func collectionView(collectionView:UICollectionView, layout collectionViewLayout: TRMosaicLayout, insetAtSection:Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+    }
+    
+    func heightForSmallMosaicCell() -> CGFloat {
+        return 150
+    }
+    
+}
 class PostersViewController:UICollectionViewController {
     
     
     private let resuseIdentifier="posterCell"
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     
     var movieId: String?{
         didSet{
@@ -26,6 +42,11 @@ class PostersViewController:UICollectionViewController {
     
     override func viewDidLoad() {
         self.collectionView!.backgroundColor = UIColor.whiteColor()
+        
+        let mosaicLayout = TRMosaicLayout()
+        self.collectionView?.collectionViewLayout = mosaicLayout
+        mosaicLayout.delegate = self
+        
     }
     
     // MARK: - UICollectionViewDataSource protocol
@@ -39,6 +60,8 @@ class PostersViewController:UICollectionViewController {
         let poster=posters[indexPath.row]
         
         let url=NSURL(string:baseURL+poster)
+        cell.imageView.frame=cell.frame
+        
         cell.imageView.af_setImageWithURL(url!)
         
         return cell
@@ -48,11 +71,6 @@ class PostersViewController:UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
     
-    func collectionView(collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                               insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
     
     func updatePosters(){
         
@@ -77,4 +95,7 @@ class PostersViewController:UICollectionViewController {
             
         }
     }
+    
+    
+    
 }

@@ -10,7 +10,7 @@ target 'TMDB' do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'FoldingCell'
-    pod 'MVCarouselCollectionView'
+    pod 'TRMosaicLayout'
     pod 'SwiftyJSON'
     
 end
