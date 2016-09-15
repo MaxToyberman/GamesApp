@@ -10,7 +10,7 @@ target 'TMDB' do
     pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'FoldingCell'
-    pod 'TRMosaicLayout'
     pod 'SwiftyJSON'
-    
+    pod 'TRMosaicLayout'
+    pod 'YoutubeSourceParserKit'
 end

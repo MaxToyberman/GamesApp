@@ -28,16 +28,22 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngq-G4-Zun">
                                                     <rect key="frame" x="8" y="8" width="84" height="84"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Uu-Smi">
-                                                    <rect key="frame" x="100" y="8" width="452" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Uu-Smi">
+                                                    <rect key="frame" x="100" y="8" width="452" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="452" id="NC8-iy-oVl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="l2X-Uu-Smi" firstAttribute="leading" secondItem="nzW-g1-gBM" secondAttribute="leading" constant="100" id="DWd-5z-yye"/>
+                                                <constraint firstItem="l2X-Uu-Smi" firstAttribute="top" secondItem="nzW-g1-gBM" secondAttribute="top" constant="8" id="H8S-6J-xsK"/>
                                                 <constraint firstAttribute="height" constant="100" id="KRB-Ez-XiU"/>
+                                                <constraint firstAttribute="trailing" secondItem="l2X-Uu-Smi" secondAttribute="trailing" constant="8" id="WjD-vj-yFe"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yep-ih-qW1">
@@ -166,7 +172,7 @@
         <!--Trailers-->
         <scene sceneID="OKa-7w-xrh">
             <objects>
-                <viewController id="v1Y-sU-xxh" sceneMemberID="viewController">
+                <viewController id="v1Y-sU-xxh" customClass="TrailersViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GO5-HX-ly1"/>
                         <viewControllerLayoutGuide type="bottom" id="aSs-7a-nxH"/>
@@ -180,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vl-lS-aEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="630"/>
+            <point key="canvasLocation" x="1942" y="586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ZG-m9-Y1Q">

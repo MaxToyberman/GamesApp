@@ -51,6 +51,7 @@ class MovieFeedTableViewController:UITableViewController {
         
         if let movie=feed?.movies[indexPath.row]{
             
+
             
             cell.title.text=movie.title
             
@@ -116,25 +117,26 @@ class MovieFeedTableViewController:UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        //if the index is not available return
+        guard let index=self.tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let id=String(feed!.movies[index.row].movieId)
+        
         if(segue.identifier=="postersSegue"){
             let postersViewController=segue.destinationViewController as! PostersViewController
             
-            //if the index is not available return
-            guard let index=self.tableView.indexPathForSelectedRow else {
-                return
-            }
-            
-            let id=String(feed!.movies[index.row].movieId)
-            
             postersViewController.movieId=id;
-            
             
         }
         else if(segue.identifier=="trailersSegue"){
             
+            let trailersViewController=segue.destinationViewController as! TrailersViewController
+            
+            trailersViewController.movieId=id
             
         }
-        
         
     }
     

@@ -55,7 +55,7 @@ class PostersViewController:UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let baseURL = "http://image.tmdb.org/t/p/w92"
+        let baseURL = "http://image.tmdb.org/t/p/w185"
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! PosterCollectionViewCell
         let poster=posters[indexPath.row]
         

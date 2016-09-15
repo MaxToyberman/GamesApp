@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5470A5C7C5514ECA3C2DABC13C975B89'
-               BlueprintName = 'TRMosaicLayout'
+               BlueprintIdentifier = 'FCB938C96D2C26955EC7C3F81778E5A9'
+               BlueprintName = 'YoutubeSourceParserKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'TRMosaicLayout.framework'>
+               BuildableName = 'YoutubeSourceParserKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

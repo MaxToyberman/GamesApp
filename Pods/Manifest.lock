@@ -5,6 +5,7 @@ PODS:
   - FoldingCell (1.0.0)
   - SwiftyJSON (2.3.2)
   - TRMosaicLayout (0.2.0)
+  - YoutubeSourceParserKit (0.2.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - FoldingCell
   - SwiftyJSON
   - TRMosaicLayout
+  - YoutubeSourceParserKit
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -19,7 +21,8 @@ SPEC CHECKSUMS:
   FoldingCell: ca0b0f73a853143bf7d968c04a6604d25fbf1af7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TRMosaicLayout: 2f1af0d457377ebc135912b658a65040be9e1651
+  YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
 
-PODFILE CHECKSUM: bfd12eb50f88a5a738936099def1492600f7335e
+PODFILE CHECKSUM: 80d040bcf68ee8f2f3900088bcb21ad553d50fbd
 
 COCOAPODS: 1.0.1

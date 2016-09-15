@@ -34,10 +34,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YoutubeSourceParserKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>05094CC4A047119F7ADC14EE74C4881C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146B89C8BD1D988ADAB93B68895C11DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63CDDF6DC5DC148C1CA7F84F32753534</key>
+		<key>5470A5C7C5514ECA3C2DABC13C975B89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D03C8B295118CAAC53D7DA82105982F</key>
+		<key>E12F29C9707425BE3ABCBB9FEE0C50F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6EA528B267033550165A063EDC128DC</key>
+		<key>FCB938C96D2C26955EC7C3F81778E5A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
