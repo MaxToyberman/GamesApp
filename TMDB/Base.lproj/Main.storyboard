@@ -38,7 +38,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Ngq-G4-Zun" firstAttribute="leading" secondItem="nzW-g1-gBM" secondAttribute="leading" constant="8" id="9Kt-W6-UQm"/>
                                                 <constraint firstItem="Ngq-G4-Zun" firstAttribute="top" secondItem="nzW-g1-gBM" secondAttribute="top" constant="8" id="A1H-wM-QeH"/>
@@ -62,6 +62,7 @@
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-g6-xCj">
                                                     <rect key="frame" x="8" y="107" width="544" height="30"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Trailers"/>
                                                     <connections>
                                                         <segue destination="v1Y-sU-xxh" kind="show" identifier="trailersSegue" id="Rbo-UO-oyg"/>
@@ -69,6 +70,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-gj-Wyy">
                                                     <rect key="frame" x="8" y="156" width="544" height="30"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Posters"/>
                                                     <connections>
                                                         <segue destination="PF1-r3-o8w" kind="show" identifier="postersSegue" id="zTB-dD-wc1"/>
