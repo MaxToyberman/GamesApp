@@ -16,6 +16,7 @@ class MovieFeedTableViewController:UITableViewController {
     let kCloseCellHeight: CGFloat = 100
     let kOpenCellHeight: CGFloat = 200
     var cellHeights = [CGFloat]()
+    var cells=[FoldingCell]()
     
     var feed:MoviesFeed?{
         didSet{
@@ -51,8 +52,6 @@ class MovieFeedTableViewController:UITableViewController {
         
         if let movie=feed?.movies[indexPath.row]{
             
-
-            
             cell.title.text=movie.title
             
             cell.overView.text=movie.overview
@@ -66,9 +65,9 @@ class MovieFeedTableViewController:UITableViewController {
             
         }
         
+        cells.append(cell)
         return cell
     }
-    
     
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -78,21 +77,7 @@ class MovieFeedTableViewController:UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
         
-        var duration = 0.0
-        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
-            cellHeights[indexPath.row] = kOpenCellHeight
-            cell.selectedAnimation(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {// close cell
-            cellHeights[indexPath.row] = kCloseCellHeight
-            cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 1.1
-        }
-        
-        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            }, completion: nil)
+        configureCellState(indexPath.row,cell: cell)
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -114,7 +99,26 @@ class MovieFeedTableViewController:UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    private func configureCellState(index:Int,cell:FoldingCell){
+        
+        var duration = 0.0
+        if cellHeights[index] == kCloseCellHeight { // open cell
+            cellHeights[index] = kOpenCellHeight
+            cell.selectedAnimation(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {// close cell
+            cellHeights[index] = kCloseCellHeight
+            cell.selectedAnimation(false, animated: true, completion: nil)
+            duration = 1.1
+        }
+        
+        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+            }, completion: nil)
+        
+        
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //if the index is not available return
@@ -138,9 +142,10 @@ class MovieFeedTableViewController:UITableViewController {
             
         }
         
+        configureCellState(index.row,cell: cells[index.row])
+        self.tableView.reloadData()
+        
     }
-    
-    
     
 }
 
