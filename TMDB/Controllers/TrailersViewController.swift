@@ -17,19 +17,25 @@ import SwiftyJSON
 
 class TrailersViewController :UIViewController{
     
-    
-    let moviePlayer = MPMoviePlayerController()
-    
+    private let moviePlayer = MPMoviePlayerController()
+    //MARK: Properties
     var movieId: String?{
         didSet{
             getTrailer()
         }
     }
     
-    
-    func getTrailer(){
+    //MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        moviePlayer.view.frame = view.frame
+        view.addSubview(moviePlayer.view)
+        moviePlayer.fullscreen = true
+    }
+    //MARK: Methods
+    private func getTrailer(){
         
-        Alamofire.request(.GET,"https://api.themoviedb.org/3/movie/"+movieId!+"/videos?api_key=39ce2c8a878066aa7e7ff178828aadb2").responseJSON { response in
+        Alamofire.request(.GET,Constants.apiURL+movieId!+"/videos?api_key="+Constants.apiKey).responseJSON { response in
             
             switch response.result{
                 
@@ -42,23 +48,12 @@ class TrailersViewController :UIViewController{
                     let youtubeURL = NSURL(string: "https://www.youtube.com/watch?v="+movieURL)!
                     self.playVideoWithYoutubeURL(youtubeURL)
                 }
-
-
                 
             case .Failure(let error):
                 print("Request failed with error: \(error)")
             }
             
         }
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        moviePlayer.view.frame = view.frame
-        view.addSubview(moviePlayer.view)
-        moviePlayer.fullscreen = true
-
     }
     
     func playVideoWithYoutubeURL(url: NSURL) {
@@ -70,5 +65,4 @@ class TrailersViewController :UIViewController{
             }
         })
     }
-    
 }

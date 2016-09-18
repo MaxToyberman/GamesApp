@@ -11,8 +11,6 @@ import UIKit
 
 class PosterCollectionViewCell:UICollectionViewCell{
     
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     
 }

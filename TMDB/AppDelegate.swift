@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func updateGamesFeed(completion:(feed:MoviesFeed)->Void){
         
-        Alamofire.request(.GET,"https://api.themoviedb.org/3/movie/now_playing?api_key=39ce2c8a878066aa7e7ff178828aadb2&page=1").responseJSON { response in
+        Alamofire.request(.GET,Constants.apiURL+"now_playing?api_key="+Constants.apiKey+"&page=1").responseJSON { response in
             
             switch response.result{
                 

@@ -14,6 +14,7 @@ import TRMosaicLayout
 
 extension PostersViewController:TRMosaicLayoutDelegate {
     
+    //MARK: collectionView
     func collectionView(collectionView:UICollectionView, mosaicCellSizeTypeAtIndexPath indexPath:NSIndexPath) -> TRMosaicCellType {
         // I recommend setting every third cell as .Big to get the best layout
         return indexPath.item % 3 == 0 ? TRMosaicCellType.Big : TRMosaicCellType.Small
@@ -30,16 +31,20 @@ extension PostersViewController:TRMosaicLayoutDelegate {
 }
 class PostersViewController:UICollectionViewController {
     
-    
-    private let resuseIdentifier="posterCell"
-    
+    //MARK: Constants
+    struct Config {
+        static let baseURL = "http://image.tmdb.org/t/p/w185"
+        static let resuseIdentifier="posterCell"
+        
+    }
+    //MARK: Properties
     var movieId: String?{
         didSet{
             updatePosters()
         }
     }
-    var posters=[String]()
-    
+    private var posters=[String]()
+    //MARK: LifeCycle
     override func viewDidLoad() {
         self.collectionView!.backgroundColor = UIColor.whiteColor()
         
@@ -55,11 +60,11 @@ class PostersViewController:UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let baseURL = "http://image.tmdb.org/t/p/w185"
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(resuseIdentifier, forIndexPath: indexPath) as! PosterCollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Config.resuseIdentifier, forIndexPath: indexPath) as! PosterCollectionViewCell
         let poster=posters[indexPath.row]
         
-        let url=NSURL(string:baseURL+poster)
+        let url=NSURL(string:Config.baseURL+poster)
         cell.imageView.frame=cell.frame
         
         cell.imageView.af_setImageWithURL(url!)
@@ -71,10 +76,9 @@ class PostersViewController:UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
     
-    
     func updatePosters(){
         
-        Alamofire.request(.GET,"https://api.themoviedb.org/3/movie/"+movieId!+"/images?api_key=39ce2c8a878066aa7e7ff178828aadb2").responseJSON { response in
+        Alamofire.request(.GET,Constants.apiURL+movieId!+"/images?api_key="+Constants.apiKey).responseJSON { response in
             
             switch response.result{
                 
@@ -92,10 +96,6 @@ class PostersViewController:UICollectionViewController {
             case .Failure(let error):
                 print("Request failed with error: \(error)")
             }
-            
         }
     }
-    
-    
-    
 }

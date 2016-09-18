@@ -9,84 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
-            timestampString = "494492500.508598"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "FoldingCell"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoldingCell.FoldingCell.containerViewTop.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSLayoutConstraint&gt;"
-                  moduleName = "FoldingCell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maximtoyberman/Google%20Drive/developer_ios/TMDB/Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
-                  timestampString = "494492500.705555"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoldingCell.FoldingCell.containerViewTop.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.NSLayoutConstraint&gt;"
-                  moduleName = "FoldingCell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maximtoyberman/Google%20Drive/developer_ios/TMDB/Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
-                  timestampString = "494492500.705711"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoldingCell.FoldingCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; FoldingCell.FoldingCell"
-                  moduleName = "FoldingCell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maximtoyberman/Google%20Drive/developer_ios/TMDB/Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
-                  timestampString = "494492500.705788"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "161">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoldingCell.FoldingCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FoldingCell.FoldingCell&gt;"
-                  moduleName = "FoldingCell"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maximtoyberman/Google%20Drive/developer_ios/TMDB/Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
-                  timestampString = "494492500.705867"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "TMDB/AppDelegate.swift"
             timestampString = "494601557.85414"
             startingColumnNumber = "9223372036854775807"
@@ -104,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TMDB/MovieFeedTableViewController.swift"
-            timestampString = "494703298.973676"
+            timestampString = "495907816.162752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "MovieFeedTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -168,13 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TMDB/MovieFeedTableViewController.swift"
-            timestampString = "495657086.002686"
+            timestampString = "495907816.162752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "prepareForSegue(_:sender:)"
-            landmarkType = "5">
+            startingLineNumber = "207"
+            endingLineNumber = "207">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TMDB/Controllers/PostersViewController.swift"
-            timestampString = "494796601.623638"
+            timestampString = "495907816.162752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "updatePosters()"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TMDB/Controllers/TrailersViewController.swift"
-            timestampString = "495566932.239913"
+            timestampString = "495711332.744957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13">
+            startingLineNumber = "14"
+            endingLineNumber = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -213,13 +133,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TMDB/Controllers/TrailersViewController.swift"
-            timestampString = "495570244.497207"
+            filePath = "TMDB/MovieFeedTableViewController.swift"
+            timestampString = "495907816.162752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -229,13 +149,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TMDB/Controllers/TrailersViewController.swift"
-            timestampString = "495566921.570725"
+            filePath = "TMDB/MovieFeedTableViewController.swift"
+            timestampString = "495907816.162752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "getTrailer()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -245,13 +165,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TMDB/Controllers/TrailersViewController.swift"
-            timestampString = "495570244.497207"
+            filePath = "Pods/FoldingCell/FoldingCell/FoldingCell/FoldingCell/FoldingCell.swift"
+            timestampString = "495888746.178657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "getTrailer()"
+            startingLineNumber = "524"
+            endingLineNumber = "524"
+            landmarkName = "pb_takeSnapshot(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -3,18 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "PostersViewController.collectionView(UICollectionView, numberOfItemsInSection : Int) -&gt; Int:PostersViewController.swift">
+         contextName = "MoviesFeed.init(moviesJson : JSON) -&gt; MoviesFeed:MoviesFeed.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostersViewController.posters.didset:PostersViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.posters?">
+               value = "posters">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PostersViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:PostersViewController.swift">
+         contextName = "UIView.pb_takeSnapshot(CGRect) -&gt; UIImage?:FoldingCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "baseURL+poster">
+               value = "frame.origin.x * -1">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,18 +30,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PostersViewController.(viewDidLoad() -&gt; ()).(closure #1):PostersViewController.swift">
+         contextName = "MovieFeedTableViewController.(trailersPressed(UIButton) -&gt; ()).(closure #1).(closure #1):MovieFeedTableViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "PostersViewController.posters.didset:PostersViewController.swift">
+         contextName = "PostersViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:PostersViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "posters">
+               value = "baseURL+poster">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MoviesFeed.init(moviesJson : JSON) -&gt; MoviesFeed:MoviesFeed.swift">
+         contextName = "PostersViewController.collectionView(UICollectionView, numberOfItemsInSection : Int) -&gt; Int:PostersViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.posters?">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "AppDelegate.(applicationDidBecomeActive(UIApplication) -&gt; ()).(closure #1):AppDelegate.swift">
@@ -49,10 +57,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PostersViewController.configureCollectionView() -&gt; ():PostersViewController.swift">
+         contextName = "MovieFeedTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():MovieFeedTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "collectionView.imagePaths">
+               value = "&quot;https://api.themoviedb.org/3/movie/&quot;+id+&quot;/images?api_key=39ce2c8a878066aa7e7ff178828aadb2&quot;">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -65,10 +73,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MovieFeedTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():MovieFeedTableViewController.swift">
+         contextName = "PostersViewController.(viewDidLoad() -&gt; ()).(closure #1):PostersViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TrailersViewController.(playVideoWithYoutubeURL(NSURL) -&gt; ()).(closure #1):TrailersViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostersViewController.configureCollectionView() -&gt; ():PostersViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "&quot;https://api.themoviedb.org/3/movie/&quot;+id+&quot;/images?api_key=39ce2c8a878066aa7e7ff178828aadb2&quot;">
+               value = "collectionView.imagePaths">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

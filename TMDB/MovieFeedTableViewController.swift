@@ -13,10 +13,11 @@ import SwiftyJSON
 
 class MovieFeedTableViewController:UITableViewController {
     
-    let kCloseCellHeight: CGFloat = 100
-    let kOpenCellHeight: CGFloat = 200
-    var cellHeights = [CGFloat]()
-    var cells=[FoldingCell]()
+    //MARK: Properties
+    private let kCloseCellHeight: CGFloat = 100
+    private let kOpenCellHeight: CGFloat = 200
+    private var cellHeights = [CGFloat]()
+    private var cells=[FoldingCell]()
     
     var feed:MoviesFeed?{
         didSet{
@@ -28,17 +29,13 @@ class MovieFeedTableViewController:UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
+    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor=UIColor.lightGrayColor()
         self.tableView.contentInset = UIEdgeInsetsZero
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
-    
-    
+    //MARK: UITbaleView delegate
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -55,10 +52,9 @@ class MovieFeedTableViewController:UITableViewController {
             cell.title.text=movie.title
             
             cell.overView.text=movie.overview
-            // Configure the cell...
+
             let URL = NSURL(string: movie.imageURL)!
             
-            //    cell.gameImage.contentMode=UIViewContentMode.ScaleAspectFit
             cell.movieImage.af_setImageWithURL(URL)
             
             cell.movieImageUnfolded.af_setImageWithURL(URL)
@@ -68,7 +64,6 @@ class MovieFeedTableViewController:UITableViewController {
         cells.append(cell)
         return cell
     }
-    
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return cellHeights[indexPath.row]
@@ -92,13 +87,12 @@ class MovieFeedTableViewController:UITableViewController {
             }
         }
     }
-    
-    
+    //MARK: Warnings
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //MARK: Method
     private func configureCellState(index:Int,cell:FoldingCell){
         
         var duration = 0.0
@@ -116,8 +110,6 @@ class MovieFeedTableViewController:UITableViewController {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
             }, completion: nil)
-        
-        
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -132,20 +124,15 @@ class MovieFeedTableViewController:UITableViewController {
             let postersViewController=segue.destinationViewController as! PostersViewController
             
             postersViewController.movieId=id;
-            
         }
         else if(segue.identifier=="trailersSegue"){
             
             let trailersViewController=segue.destinationViewController as! TrailersViewController
             
             trailersViewController.movieId=id
-            
         }
-        
         configureCellState(index.row,cell: cells[index.row])
         self.tableView.reloadData()
-        
     }
-    
 }
 
