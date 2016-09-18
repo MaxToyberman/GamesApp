@@ -3,6 +3,7 @@
 //  TMDB
 //
 //  Created by Maxim Toyberman on 26/08/2016.
+//  Linkedin:https://www.linkedin.com/in/maxim-toyberman-8a75556b
 //  Copyright © 2016 Maxim Toyberman. All rights reserved.
 //
 
@@ -38,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        updateGamesFeed({(feed)->Void in
+        updateMoviesFeed({(feed)->Void in
             //find the first navigationController
             let navigationController=application.windows[0].rootViewController as? UINavigationController
             
@@ -54,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func updateGamesFeed(completion:(feed:MoviesFeed)->Void){
+    func updateMoviesFeed(completion:(feed:MoviesFeed)->Void){
         
         Alamofire.request(.GET,Constants.apiURL+"now_playing?api_key="+Constants.apiKey+"&page=1").responseJSON { response in
             
